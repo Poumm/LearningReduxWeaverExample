@@ -16,9 +16,17 @@ class SearchBar extends Component {
         console.log(event.target.value);
     }
 
+    onFormSubmit(event){
+        event.preventDefault();
+
+        //fetch data ici
+    }
+
     render(){
         return (
-            <form className="input-group">
+            <form 
+            onSubmit={this.onFormSubmit}
+            className="input-group">
                 <input 
                     placeholder="Search city"
                     className="form-control"
